@@ -1,0 +1,15 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.theminequest</groupId>
+  <artifactId>i18n-ast</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>AST i18n method checker</name>
+  <description>This scans through source directories, finds Java files, checks for method calls to _ or tr, and dumps their strings into a properties file for use in internalization.</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.google.code.javaparser</groupId>
+  		<artifactId>javaparser</artifactId>
+  		<version>1.0.9</version>
+  	</dependency>
+  </dependencies>
+</project>
