@@ -1,15 +1,61 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.theminequest</groupId>
-  <artifactId>i18n-ast</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>AST i18n method checker</name>
-  <description>This scans through source directories, finds Java files, checks for method calls to _ or tr, and dumps their strings into a properties file for use in internalization.</description>
-  <dependencies>
-  	<dependency>
-  		<groupId>com.google.code.javaparser</groupId>
-  		<artifactId>javaparser</artifactId>
-  		<version>1.0.9</version>
-  	</dependency>
-  </dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.theminequest</groupId>
+	<artifactId>i18n-ast</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>AST i18n method checker</name>
+	<description>This scans through source directories, finds Java files, checks for method calls to _ or tr, and dumps their strings into a properties file for use in internalization.</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse</groupId>
+			<artifactId>osgi</artifactId>
+			<version>3.9.0.v20130529-1710</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jdt</groupId>
+			<artifactId>core</artifactId>
+			<version>3.9.0.v20130604-1421</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.equinox</groupId>
+			<artifactId>common</artifactId>
+			<version>3.6.200.v20130402-1505</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.core</groupId>
+			<artifactId>contenttype</artifactId>
+			<version>3.4.200.v20130326-1255</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.core</groupId>
+			<artifactId>jobs</artifactId>
+			<version>3.5.300.v20130429-1813</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.core</groupId>
+			<artifactId>runtime</artifactId>
+			<version>3.9.0.v20130326-1255</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.equinox</groupId>
+			<artifactId>preferences</artifactId>
+			<version>3.5.100.v20130422-1538</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.core</groupId>
+			<artifactId>resources</artifactId>
+			<version>3.8.100.v20130521-2026</version>
+		</dependency>
+
+	</dependencies>
+
+	<!-- http://stackoverflow.com/a/7623805 -->
+	<repositories>
+		<repository>
+			<id>repo</id>
+			<url>file://${project.basedir}/repo</url>
+		</repository>
+	</repositories>
 </project>

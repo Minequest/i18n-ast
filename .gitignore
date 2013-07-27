@@ -1,7 +1,7 @@
 # Compiled source #
 ###################
 bin
-lib
+repo
 out
 target
 *.com
@@ -21,7 +21,6 @@ target
 *.dmg
 *.gz
 *.iso
-*.jar
 *.rar
 *.tar
 *.zip
