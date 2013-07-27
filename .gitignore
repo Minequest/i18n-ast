@@ -11,6 +11,10 @@ target
 *.o
 *.so
 
+# Backups #
+###########
+*~
+
 # Git #
 #######
 .git
