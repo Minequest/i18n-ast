@@ -17,21 +17,11 @@ import org.eclipse.jdt.core.dom.MethodInvocation;
 // http://www.programcreek.com/2011/11/use-jdt-astparser-to-parse-java-file/
 public class Main {
 	
-	public static void _(String s, Object... args) {
-		
-	}
-	
 	public static void main(final String[] args) throws Exception {
 		Properties prop = new Properties();
-		if (args.length < 1)
-			recurse(new File(""), prop);
-		else
-			recurse(new File(args[0]), prop);
+		for (String arg : args)
+			recurse(new File(arg), prop);
 		prop.store(new FileWriter(new File("en_US.properties")), "Generated with MineQuest i18n-ast.");
-		
-		_("Hello World!", 0);
-		_("Wheeee", 1);
-		_("Hello World 2!", 10, new Properties());
 	}
 	
 	public static void recurse(File current, Properties prop) throws IOException {
